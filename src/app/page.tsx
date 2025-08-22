@@ -1,5 +1,12 @@
+"use client";
+
 import { redirect } from 'next/navigation';
 
 export default function Home() {
-  redirect('/login');
+  const userToken = localStorage.getItem("userToken");
+  if(!userToken) {
+    redirect('/login');
+  } else {
+    redirect("/dashboard");
+  }
 }
