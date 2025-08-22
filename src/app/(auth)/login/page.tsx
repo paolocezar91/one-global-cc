@@ -6,17 +6,17 @@ import PasswordInput from "@/components/shared/password-input";
 import TextInput from "@/components/shared/text-input";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { FormEvent } from "react";
-import AuthLayout from "../layout";
+import { FormEvent, useEffect } from "react";
 
 export default function Login() {
   const router = useRouter();
-  const userToken = localStorage.getItem("userToken");
-
-  if(userToken) {
-    router.push("/dashboard");
-    return;
-  }
+  
+  useEffect(() => {
+    const userToken = localStorage.getItem("userToken");
+    if (userToken) {
+      router.push("/dashboard");
+    }
+  }, [router]);
 
   const doLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

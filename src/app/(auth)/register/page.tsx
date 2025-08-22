@@ -1,21 +1,22 @@
 "use client";
 
+import { register } from "@/api/api";
 import Button from "@/components/shared/button";
-import AuthLayout from "../layout";
-import Link from "next/link";
 import PasswordInput from "@/components/shared/password-input";
 import TextInput from "@/components/shared/text-input";
-import { FormEvent, useState } from "react";
-import { register } from "@/api/api";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FormEvent, useEffect, useState } from "react";
 
 export default function Register() {
   const router = useRouter();
-  const userToken = localStorage.getItem("userToken");
 
-  if(userToken) {
-    router.push("/dashboard");
-  }
+  useEffect(() => {
+    const userToken = localStorage.getItem("userToken");
+    if (userToken) {
+      router.push("/dashboard");
+    }
+  }, [router]);
 
   const [isDisabled, setIsDisabled] = useState(true);
   const [password, setPassword] = useState("");
