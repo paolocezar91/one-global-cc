@@ -32,7 +32,7 @@ export default function Register() {
     setIsDisabled(!(pwd && repeatPwd && pwd === repeatPwd));
   };
 
-  return <AuthLayout>
+  return <>
     <p className="text-xl font-bold text-foreground">Sign Up</p>
     <form onSubmit={doRegister} className="w-100 mb-4 mt-2 border-2 border-color-foreground border-solid rounded-lg px-8 py-6">
       <div className="grid gap-2">
@@ -72,5 +72,5 @@ export default function Register() {
         &lt; Back to Login
       </Link>
     </p>
-  </AuthLayout>;
+  </>;
 }

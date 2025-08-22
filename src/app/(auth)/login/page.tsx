@@ -1,13 +1,13 @@
 "use client";
 
-import Link from "next/link";
-import AuthLayout from "../layout";
+import { login } from "@/api/api";
+import Button from "@/components/shared/button";
 import PasswordInput from "@/components/shared/password-input";
 import TextInput from "@/components/shared/text-input";
-import Button from "@/components/shared/button";
-import { login } from "@/api/api";
-import { FormEvent } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FormEvent } from "react";
+import AuthLayout from "../layout";
 
 export default function Login() {
   const router = useRouter();
@@ -37,7 +37,7 @@ export default function Login() {
       })
   };
 
-  return <AuthLayout>
+  return <>
     <p className="text-xl font-bold text-foreground">Sign In</p>
     <form onSubmit={(e) => doLogin(e)} className="w-100 mb-4 mt-2 border-2 border-color-foreground border-solid rounded-lg px-8 py-6">
       <div className="grid gap-2">
@@ -53,5 +53,5 @@ export default function Login() {
         Not registered? Click here to register for an account!
       </Link>
     </p>
-  </AuthLayout>;
+  </>;
 }
