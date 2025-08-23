@@ -6,6 +6,10 @@ export interface UsersResponse {
   total_pages: number;
 }
 
+export interface UserResponse {
+  data: User;
+}
+
 export interface User {
   id: number;
   email: string;

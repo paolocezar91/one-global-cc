@@ -37,17 +37,17 @@ export function UserList() {
   const userList = users.filter((user) => !deletedUsers.includes(user.id));
 
   const handleDeleteUser = (id: number) => {
-      const answer = confirm(
-        `Are you sure you want to delete this user id: ${id}?`,
-      );
-  
-      if (answer) {
-        // alert("User deletion is not implemented yet.");
-        deleteUser(id)
-          .then(() => setDeletedUsers((users) => [...users, id]))
-          .catch(() => alert(`Something went wrong!`))
-      }
+    const answer = confirm(
+      `Are you sure you want to delete this user id: ${id}?`,
+    );
+
+    if (answer) {
+      // alert("User deletion is not implemented yet.");
+      deleteUser(id)
+        .then(() => setDeletedUsers((users) => [...users, id]))
+        .catch(() => alert(`Something went wrong!`))
     }
+  }
 
   const gotoNextPage = () => setPage(page < Number(totalPages || 0) ? page + 1 : page);
   const gotoPrevPage = () => setPage(page > 1 ? page - 1 : page);

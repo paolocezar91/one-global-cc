@@ -8,10 +8,11 @@ interface TextInputInterface {
   placeholder: string;
   type?: string;
   className?: string;
+  value?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function TextInput({ id, label, htmlFor, type = "", name, placeholder, className = "", onChange }: Readonly<TextInputInterface>) {
+export default function TextInput({ id, label, htmlFor, type = "", name, placeholder, className = "", value = "", onChange }: Readonly<TextInputInterface>) {
   return <>
     <label className={`text-foreground ${className}`} htmlFor={htmlFor}>{label}</label>
     <input
@@ -37,6 +38,7 @@ export default function TextInput({ id, label, htmlFor, type = "", name, placeho
       type={type}
       name={name}
       placeholder={placeholder}
+      value={value}
     />
   </>
 }
