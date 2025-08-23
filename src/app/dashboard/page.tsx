@@ -1,7 +1,7 @@
-import DashboardLayout from "./layout";
+import { UserList } from "@/components/user-list/user-list";
 
 export default function Dashboard() {
-  return <DashboardLayout>
-    Dashboard Page
-  </DashboardLayout>;
+  return <>
+    <UserList />
+  </>;
 }

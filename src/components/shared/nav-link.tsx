@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-interface NavLinkInterface { className?: string; children: React.ReactNode, color?: string, size?: string, href: string }
+interface NavLinkInterface { 
+  className?: string;
+  children: React.ReactNode;
+  color?: string;
+  size?: string;
+  href: string;
+}
 
 export default function NavLink({ children, color = 'background', size = 'md', href, className = "" }: Readonly<NavLinkInterface>) {
   const paddingSizes: Record<string, string> = {
@@ -20,8 +26,8 @@ export default function NavLink({ children, color = 'background', size = 'md', h
   }
 
   const colors: Record<string, string> = {
-    background: "bg-background text-foreground border-foreground hover:bg-foreground hover:text-background hover:border-background",
-    foreground: "bg-foreground text-background border-background hover:bg-background hover:text-foreground hover:border-foreground",
+    background: "bg-background text-foreground hover:bg-foreground hover:text-background",
+    foreground: "bg-foreground text-background hover:bg-background hover:text-foreground",
   }
 
   const _classes = `${colors[color]} ${paddingSizes[size]} ${textSizes[size]}`;
@@ -33,8 +39,6 @@ export default function NavLink({ children, color = 'background', size = 'md', h
       items-center
       justify-center
       rounded-lg
-      border-1
-      border-solid
       ${_classes}
       ${className}`
     }

@@ -65,7 +65,7 @@ export default function Register() {
             }}
           />
         </div>
-        <Button disabled={isDisabled} type="submit" size="lg">Register</Button>
+        <Button className="w-full border-2 border-solid border-foreground" disabled={isDisabled} type="submit" size="lg">Register</Button>
       </div>
     </form>
     <p>

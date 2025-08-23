@@ -1,5 +1,6 @@
 import axios from "axios";
 import { API_KEY, API_URL } from "./config";
+import { UsersResponse } from "./interfaces";
 
 const api = axios.create({ baseURL: API_URL });
 const apiKey = API_KEY;
@@ -29,7 +30,7 @@ export async function register(body: RegisterInterface) {
 }
 
 export async function listUsers(page: number = 1) {
-  return api.get(`/api/users?page=${page}`);
+  return api.get<UsersResponse>(`/api/users?page=${page}`);
 }
 
 export async function deleteUser(id: number) {

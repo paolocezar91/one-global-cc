@@ -45,7 +45,7 @@ export default function Login() {
           <TextInput className="mb-1" id="email" name="email" placeholder="example@email.com" type="email" htmlFor="email" label="E-mail" />
           <PasswordInput id="password" name="password" htmlFor="password" placeholder="Password" label="Password" />
         </div>
-        <Button type="submit" size="lg">Sign in</Button>
+        <Button className="w-full border-2 border-solid border-foreground" type="submit" size="lg">Sign in</Button>
       </div>
     </form>
     <p>
