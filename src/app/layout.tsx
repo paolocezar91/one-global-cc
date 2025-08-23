@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "1 Global Coding Challenge",
+  title: "User Management Coding Challenge",
   description: "A coding challenge for a Typescript FrontEnd Senior role",
 };
 

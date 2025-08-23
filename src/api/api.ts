@@ -10,22 +10,22 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-interface LoginInterface {
+interface LoginData {
     email: string;
     username?: string;
     password: string;
 }
-export async function login(body: LoginInterface) {
+export async function login(body: LoginData) {
   return api.post("/api/login", body);
 }
 
-interface RegisterInterface {
+interface RegisterData {
     email: string;
     username?: string;
     password: string;
 }
 
-export async function register(body: RegisterInterface) {
+export async function register(body: RegisterData) {
   return api.post("/api/register", body);
 }
 
@@ -37,14 +37,18 @@ export async function getUser(id: number) {
   return api.get(`/api/users/${id}`);
 }
 
-interface PutUserData {
+interface UserData {
     email: string;
     first_name: string;
     last_name: string;
 }
 
-export async function putUser(id: number, body: PutUserData) {
+export async function putUser(id: number, body: UserData) {
   return api.put<UserResponse>(`/api/users/${id}`, body);
+}
+
+export async function postUser(body: UserData) {
+  return api.post<UserResponse>(`/api/users`, body);
 }
 
 export async function deleteUser(id: number) {

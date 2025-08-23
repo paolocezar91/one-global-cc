@@ -7,7 +7,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   const leftChildren = <p>
-    1Global Coding Challenge
+    User Management Coding Challenge
   </p>;
   
   const rightChildren = <div className="flex">

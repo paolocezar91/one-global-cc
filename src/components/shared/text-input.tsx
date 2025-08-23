@@ -12,7 +12,7 @@ interface TextInputInterface {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function TextInput({ id, label, htmlFor, type = "", name, placeholder, className = "", value = "", onChange }: Readonly<TextInputInterface>) {
+export default function TextInput({ id, label, htmlFor, type = "", name, placeholder, className = "", value, onChange }: Readonly<TextInputInterface>) {
   return <>
     <label className={`text-foreground ${className}`} htmlFor={htmlFor}>{label}</label>
     <input

@@ -21,7 +21,7 @@ export default function DashboardLayout({
   };
 
   const leftChildren = <p>
-    1Global Coding Challenge
+    User Management Coding Challenge
   </p>;
 
   const rightChildren = (
@@ -29,7 +29,7 @@ export default function DashboardLayout({
       <Button className="w-fit mr-2" type="button" onClick={toggleTheme}>
         {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
       </Button>
-      <NavLink className="w-fit text-center mr-2" href="dashboard/">Dashboard</NavLink>
+      <NavLink className="w-fit text-center mr-2" href="/dashboard/">Dashboard</NavLink>
       <Button className="w-fit" type="button" onClick={doLogout}>Sign out</Button>
     </>
   );
