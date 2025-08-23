@@ -27,5 +27,5 @@ This project was fun and a bit challenging to make in a 3 day span, given I coul
  Some of requirements, like showcasing the first name of the user are simply impossible with the limitations of the reqres API. Also some requirements are easy to miss, like the docker part, since it is only specified in the very end, and not as one of the 4 parts of the development.
 
 For means of transparency I have to disclose 2 things: 
-- Since I had already done another part of the coding challenge that also had similar requisites and functionalities, one or two parts were inspired by them, like the Axios API calls function and some markup strtuctures.
-- Copilot was used to streamline some parts of development (prompting, but not autocompleting). It was not to used to build any components or functionalities to a full extent, but to get rid of minor bugs during development and avoid repetitive tasks.
+- Since I had already done another part of the coding challenge that also had similar requisites and functionalities, one or two parts were inspired by them, like the Axios API calls function and some markup structures.
+- Copilot was used to streamline some parts of development (prompting, but not autocompleting). It was not to used to build any components or functionalities to a full extent, but to get rid of minor bugs during development and avoid repetitive tasks and configuring testing.
