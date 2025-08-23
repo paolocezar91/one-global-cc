@@ -26,7 +26,15 @@ export default function Register() {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const email = (form.elements.namedItem("email") as HTMLInputElement)?.value;
-    register({ email, password });
+    register({ email, password }).then((res) => {
+        // Storing user token on local storage only for this demo
+        // On real application we should not store it in this way.
+        localStorage.setItem("userToken", JSON.stringify(res.data.token));
+        router.push("/dashboard");
+      }).catch((err) => {
+        console.log(err);
+        alert("Invalid credentials");
+      })
   };
 
   const checkPassword = (pwd: string, repeatPwd: string) => {
