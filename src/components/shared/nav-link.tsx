@@ -35,7 +35,6 @@ export default function NavLink({ children, color = 'background', size = 'md', h
   return <Link
     href={href}
     className={`
-      w-full
       items-center
       justify-center
       rounded-lg
